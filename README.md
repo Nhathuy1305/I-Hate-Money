@@ -1,2 +1,2 @@
-Dang Nhat Huy - ITITIU20043
-Ho Huu Hiep - ITITIU20202
+- Dang Nhat Huy - ITITIU20043
+- Ho Huu Hiep - ITITIU20202

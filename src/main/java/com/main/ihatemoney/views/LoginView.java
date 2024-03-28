@@ -1,5 +1,6 @@
 package com.main.ihatemoney.views;
 
+import com.vaadin.flow.component.confirmdialog.ConfirmDialog;
 import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H3;
@@ -13,7 +14,7 @@ import com.vaadin.flow.server.auth.AnonymousAllowed;
 @Route("login")
 @PageTitle("Login | IHateMoney")
 @AnonymousAllowed
-//@CssImport(value = "./themes/prospero/views/login-form.css", themeFor = "")
+@CssImport(value = "./themes/prospero/views/login-form.css", themeFor = "")
 public class LoginView extends VerticalLayout implements BeforeEnterObserver {
 
     LoginI18n i18n = LoginI18n.createDefault();
@@ -52,6 +53,16 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
                 loginForm,
                 new RouterLink("Create an account", RegistrationView.class)
         );
+
+        // Forgot Password
+        loginForm.addForgotPasswordListener(e -> {
+            ConfirmDialog confirmDialog = new ConfirmDialog();
+            confirmDialog.setHeader("Forgot Password");
+            confirmDialog.setText("If you are experiencing issues " +
+                    "logging into your account, please contact I.Hate.Money@gmail.com");
+            confirmDialog.setConfirmText("OK");
+            confirmDialog.open();
+        });
 
         // Convert the username text to lower case
         loginForm.addLoginListener(e -> {

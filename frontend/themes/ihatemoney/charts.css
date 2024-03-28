@@ -1,0 +1,41 @@
+:where([styled-mode]) .highcharts-data-label text {
+    font-size: large !important;
+}
+
+:host(.totals-chart) .highcharts-axis-title text {
+    font-size: large;
+}
+
+:host(.totals-chart) .highcharts-data-label {
+    font-size: x-large;
+    --lumo-font-family: -apple-system, BlinkMacSystemFont, "Roboto", "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-weight: bolder;
+    margin-top: 1rem;
+}
+
+:host(.totals-chart) .highcharts-yaxis-labels { /*.highcharts-axis-labels*/
+    font-size: large;
+}
+
+:host(.totals-chart) .income-column-bar {
+    /*fill: #1ac349;*/
+    fill: #90ed7d;
+}
+
+:host(.totals-chart) .expense-column-bar {
+    /*fill: #ff7745;*/
+    fill: #ff7d94;
+}
+
+.huge-axis {
+    font-size: larger;
+    font-weight: bolder;
+}
+
+
+/* MOBILE DEVICES */
+@media all and (max-width: 800px) {
+    :where([styled-mode]) .highcharts-data-label text {
+        font-size: small !important;
+    }
+}

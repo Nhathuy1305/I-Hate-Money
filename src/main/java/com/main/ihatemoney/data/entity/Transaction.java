@@ -3,6 +3,7 @@ package com.main.ihatemoney.data.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.ManyToOne;
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
@@ -17,7 +18,7 @@ public class Transaction extends AbstractEntity{
     @NotNull
     private BigDecimal amount;
 
-    @NotNull
+    @NotEmpty
     private String description;
 
     @ManyToOne
@@ -26,7 +27,6 @@ public class Transaction extends AbstractEntity{
 
     @NotNull
     @Enumerated
-
     private Type type;
 
     private Long userId;

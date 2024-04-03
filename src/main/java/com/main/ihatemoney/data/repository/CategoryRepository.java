@@ -1,2 +1,20 @@
-package com.main.ihatemoney.data.repository;public interface CategoryRepository {
+package com.main.ihatemoney.data.repository;
+
+import com.main.ihatemoney.data.entity.Category;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface CategoryRepository extends JpaRepository<Category, Long> {
+
+    @Query("select c from categories c where c.name = :c_name")
+    Category findCategoriesByName(@Param("c_name") String categoryName);
+
+    @Modifying
+    @Query("update categories c set c.userIdsCsv = c.userIdsCsv || :user_id " +     // || = concat
+            "where c.id = :c.id")
+    void updateCustomCategoryUserIds(@Param("c_id") Long categoryId, @Param("user_id") String userId);
 }

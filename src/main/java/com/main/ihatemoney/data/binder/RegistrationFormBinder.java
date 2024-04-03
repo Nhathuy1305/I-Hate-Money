@@ -4,6 +4,7 @@ import com.main.ihatemoney.data.entity.User;
 import com.main.ihatemoney.data.service.PfmService;
 import com.main.ihatemoney.views.forms.RegistrationForm;
 import com.vaadin.flow.data.binder.BeanValidationBinder;
+import com.vaadin.flow.data.binder.ValidationResult;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 public class RegistrationFormBinder {
@@ -25,7 +26,9 @@ public class RegistrationFormBinder {
         BeanValidationBinder<User> binder = new BeanValidationBinder<>(User.class);
         binder.bindInstanceFields(registrationForm);
 
-//        binder.forField(registrationForm.getPassword())
-//                .withValidator(this::passwordValidator).buin
+        binder.forField(registrationForm.getPassword())
+//                .withValidator(this::).buin
     }
+
+//    private ValidationResult
 }

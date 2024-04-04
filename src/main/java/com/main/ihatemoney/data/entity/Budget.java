@@ -5,7 +5,7 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.sql.Date;
 import java.time.LocalDateTime;
 
 @Entity(name = "budgets")

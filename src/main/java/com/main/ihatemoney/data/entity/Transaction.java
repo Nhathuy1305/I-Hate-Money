@@ -7,7 +7,7 @@ import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 
 import java.math.BigDecimal;
-import java.util.Date;
+import java.sql.Date;
 
 @Entity(name = "transactions")
 public class Transaction extends AbstractEntity{

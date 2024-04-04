@@ -14,7 +14,7 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
     Category findCategoriesByName(@Param("c_name") String categoryName);
 
     @Modifying
-    @Query("update categories c set c.userIdsCsv = c.userIdsCsv || :user_id " +     // || = concat
-            "where c.id = :c.id")
+    @Query("update categories c set c.userIdsCsv = c.userIdsCsv || :user_id " + // || = concat
+            "where c.id = :c_id")
     void updateCustomCategoryUserIds(@Param("c_id") Long categoryId, @Param("user_id") String userId);
 }

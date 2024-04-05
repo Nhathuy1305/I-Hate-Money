@@ -5,10 +5,10 @@ import com.main.ihatemoney.data.repository.BudgetRepository;
 import com.main.ihatemoney.data.repository.CategoryRepository;
 import com.main.ihatemoney.data.repository.TransactionRepository;
 import com.main.ihatemoney.data.repository.UserRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.math.BigDecimal;
 import java.sql.Date;
@@ -176,5 +176,56 @@ public class PfmService {
         return filteredTransactions;
     }
 
-//    public BigDecimal getSumIncode
+    public BigDecimal getSumIncomeTransactionsAll(Long userId) {
+        return transactionRepository.getSumTransactionsByType(userId, Type.INCOME);
+    }
+
+    public BigDecimal getSumExpenseTransactionsAll(Long userId) {
+        return transactionRepository.getSumTransactionsByType(userId, Type.EXPENSE);
+    }
+
+    public BigDecimal getSumIncomeTransactionsUpToCurrentDate(Long userId) {
+        return transactionRepository.getSumTransactionsByTypeUpToCurrentDate(userId, Type.INCOME);
+    }
+
+    public BigDecimal getSumExpenseTransactionsUpToCurrentDate(Long userId) {
+        return transactionRepository.getSumTransactionsByTypeUpToCurrentDate(userId, Type.EXPENSE);
+    }
+
+    public Integer getTransactionCount(Long userId) {
+        return transactionRepository.getTransactionCount(userId);
+    }
+
+    public List<Integer> findDistinctYears(Long userId) {
+        return transactionRepository.findDistinctYears(userId);
+    }
+
+    public BigDecimal getSumTransactionsByMonthAndYearAndType(Long userId, Integer year, Integer month, Type type) {
+        return transactionRepository.getSumTransactionsByMonthAndYearAndType(userId, year, month, type);
+    }
+
+    public List<Object[]> sumTransactionByCategoryAndYear(Long userId, Type type, Integer year) {
+        return transactionRepository.sumTransactionsByCategoryAndYear(userId, type, year);
+    }
+
+    public BigDecimal getSumIncomeTransactionsByYear(Long userId, Integer year) {
+        return transactionRepository.getSumTransactionsByTypeAndYear(userId, Type.INCOME, year);
+    }
+
+    public BigDecimal getSumExpenseTransactionsByYear(Long userId, Integer year) {
+        return transactionRepository.getSumTransactionsByTypeAndYear(userId, Type.EXPENSE, year);
+    }
+
+    public Integer getTransactionCountByYear(Long userId, Integer year) {
+        return transactionRepository.getTransactionCountByYear(userId, year);
+    }
+
+    public void updateExistingUserInfo(User user) {
+        userRepository.save(user);
+    }
+
+    @Transactional
+    public void deleteAllTransactionsForUser(Long userId) {
+        transactionRepository.deleteAllTransactionsByUserId(userId);
+    }
 }

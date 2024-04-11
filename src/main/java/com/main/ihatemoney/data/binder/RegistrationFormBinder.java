@@ -1,9 +1,6 @@
 package com.main.ihatemoney.data.binder;
 
-import com.main.ihatemoney.data.entity.Budget;
-import com.main.ihatemoney.data.entity.Transaction;
-import com.main.ihatemoney.data.entity.Type;
-import com.main.ihatemoney.data.entity.User;
+import com.main.ihatemoney.data.entity.*;
 import com.main.ihatemoney.data.service.PfmService;
 import com.main.ihatemoney.views.LoginView;
 import com.main.ihatemoney.views.forms.RegistrationForm;
@@ -11,6 +8,7 @@ import com.vaadin.flow.component.UI;
 import com.vaadin.flow.component.notification.Notification;
 import com.vaadin.flow.component.notification.NotificationVariant;
 import com.vaadin.flow.data.binder.BeanValidationBinder;
+import com.vaadin.flow.data.binder.ValidationException;
 import com.vaadin.flow.data.binder.ValidationResult;
 import com.vaadin.flow.data.binder.ValueContext;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -161,7 +159,29 @@ public class RegistrationFormBinder {
         binder.setStatusLabel(registrationForm.getErrorMessage());
 
         registrationForm.getSubmit().addClickListener(e -> {
+            try {
+                User userBean = new User(); // new bean to store user info into
+                binder.writeBean(userBean); // Run validation and write the values to the bean
 
+                registrationForm.setEmail(userBean.getEmail().toLowerCase());
+                userBean.setEmail(userBean.getEmail().toLowerCase());
+                userBean.setPassword(passwordEncoder.encode(userBean.getPassword()));
+                userBean.setRole(Role.USER);
+                userBean.setAllowMarketingEmails(registrationForm.getAllowMarketing().getValue());
+
+                System.out.println("Adding new user: " + userBean);
+
+                pfmService.addNewUser(userBean);    // Add new user to the database
+
+                generateSampleTransactions(userBean);
+                generateSampleBudget(userBean);
+
+                showSuccess(userBean);  // Display success message
+
+            } catch (ValidationException exception) {
+                System.out.println("Validation exception: " + exception.getMessage());
+                exception.getBeanValidationErrors().forEach(System.out::println);
+            }
         });
     }
 }

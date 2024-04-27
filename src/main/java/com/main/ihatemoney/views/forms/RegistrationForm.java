@@ -121,7 +121,7 @@ public class RegistrationForm extends FormLayout implements RouterLayout {
         return submit;
     }
 
-    public void setEmail(EmailField email) {
-        this.email = email;
+    public void setEmail(String email) {
+        this.email.setValue(email);
     }
 }

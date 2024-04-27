@@ -34,7 +34,7 @@ public class Budget extends AbstractEntity {
 
     public Budget() {}
 
-    public Budget(String name, Date startDate, Date endDate, LocalDateTime dateCreated, BigDecimal spendingGoal, String description, Long userId) {
+    public Budget(String name, Date startDate, Date endDate, BigDecimal spendingGoal, String description, Long userId, LocalDateTime dateCreated) {
         this.name = name;
         this.startDate = startDate;
         this.endDate = endDate;

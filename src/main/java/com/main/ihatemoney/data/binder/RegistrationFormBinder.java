@@ -86,12 +86,12 @@ public class RegistrationFormBinder {
                         "Example Budget",
                         Date.valueOf(LocalDate.now().minusMonths(3)),
                         Date.valueOf(LocalDate.now().plusDays(3)),
-                LocalDateTime.now(),
-                BigDecimal.valueOf(350.00),
-                "See how IHateMoney budgets work with this example. " +
-                                "Customize or delete this budget to fit your own financial plans.",
-                newUser.getId()
-                );
+                        BigDecimal.valueOf(350.00),
+                        "See how IHateMoney budgets work with this example. " +
+                        "Customize or delete this budget to fit your own financial plans.",
+                        newUser.getId(),
+                        LocalDateTime.now()
+        );
 
         pfmService.saveBudget(sampleBudget);
     }

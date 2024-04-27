@@ -1,0 +1,28 @@
+:host {
+    --progress-color: #d00fee;
+}
+
+vaadin-progress-bar::part(value) {  /* for dynamic progress bar color updates */
+    background-color: var(--progress-color);
+}
+
+.progress-bar {
+    height: 1rem;
+}
+
+.progress-bar-label {
+    font-weight: bold;
+    font-size: larger;
+}
+
+.green {
+    color: #158443;
+}
+
+.yellow {
+    color: #ffbd07;
+}
+
+.red {
+    color: #E21D12;
+}

@@ -1,0 +1,11 @@
+.logo-image-login {
+    width: 7rem;
+    height: 7rem;
+}
+
+@media all and (max-width: 380px) { /* very small screen */
+    .logo-image-login {
+        width: 4rem;
+        height: 4rem;
+    }
+}

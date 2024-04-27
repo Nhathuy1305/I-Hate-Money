@@ -1,0 +1,56 @@
+.budget-list-view ol {
+    grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+}
+
+.budget-list-view li {
+    transition: all 200ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color, box-shadow;
+}
+
+.budget-list-view li:hover {
+    background-color: var(--lumo-base-color);
+    box-shadow: var(--lumo-box-shadow-s);
+}
+
+.budget-dialog-vl {
+    width: 40rem !important;
+    height: 42rem;
+    align-items: center;
+    justify-content: center;
+}
+
+:host(.budget-dialog) [part="content"] {
+    padding:0 !important;
+}
+
+@media all and (max-width: 800px) {
+    .budget-dialog-vl {
+        width: 22rem !important;;
+        height: 30rem;
+        padding: 0 0 0 0;
+    }
+
+    :host(.budget-dialog) [part="content"] {
+        padding:0 !important;
+    }
+
+    vaadin-dialog-overlay::part(content) {
+        padding: .2rem !important;
+    }
+
+    vaadin-dialog-overlay {
+        align-items: center;;
+    }
+
+    .total-expenses-text {
+        padding-bottom: 1rem;
+    }
+
+    .budget-form {
+        width: 20em !important;
+    }
+
+    .subtitle-text {
+        padding-bottom: 0;
+    }
+}

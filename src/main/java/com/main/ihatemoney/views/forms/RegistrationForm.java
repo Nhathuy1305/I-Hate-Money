@@ -18,7 +18,7 @@ import com.vaadin.flow.router.RouterLink;
 
 import java.util.stream.Stream;
 
-@CssImport(value = "frontend/themes/ihatemoney/views/registration-form.css", themeFor = "")
+@CssImport(value = "./themes/ihatemoney/views/registration-form.css", themeFor = "")
 public class RegistrationForm extends FormLayout implements RouterLayout {
 
     private Image logo;

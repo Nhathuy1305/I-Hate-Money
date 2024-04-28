@@ -14,7 +14,7 @@ import com.vaadin.flow.server.auth.AnonymousAllowed;
 @Route("login")
 @PageTitle("Login | IHateMoney")
 @AnonymousAllowed
-@CssImport(value = "./themes/prospero/views/login-form.css", themeFor = "")
+@CssImport(value = "./themes/ihatemoney/views/login-form.css", themeFor = "")
 public class LoginView extends VerticalLayout implements BeforeEnterObserver {
 
     LoginI18n i18n = LoginI18n.createDefault();

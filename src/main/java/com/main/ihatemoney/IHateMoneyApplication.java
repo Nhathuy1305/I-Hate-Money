@@ -9,8 +9,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@Theme(value = "IHateMoney", variant = Lumo.LIGHT)
-//@Theme(value = "IHateMoney", variant = Lumo.DARK)
+@Theme(value = "ihatemoney", variant = Lumo.LIGHT)
+//@Theme(value = "ihatemoney", variant = Lumo.DARK)
 @PWA(
 		name = "I-Hate-Money",
 		shortName = "IHateMoney",

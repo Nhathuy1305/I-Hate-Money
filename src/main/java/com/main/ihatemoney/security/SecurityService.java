@@ -25,8 +25,7 @@ public class SecurityService {
 
     public Long getCurrentUserID(PfmService service) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth != null && auth.getPrincipal() instanceof UserDetails) {
-            UserDetails userPrincipal = (UserDetails) auth.getPrincipal();
+        if (auth != null && auth.getPrincipal() instanceof UserDetails userPrincipal) {
             String usernameEmail = userPrincipal.getUsername();
             return service.findUserByEmail(usernameEmail).getId();
         } else {

@@ -125,6 +125,7 @@ public class User extends AbstractEntity implements UserDetails {
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email +  '\'' +
                 ", allowMarketingEmails=" + allowMarketingEmails +
+                ", enabled=" + enabled +
                 ", role=" + role +
                 ", password='" + password + '\'' +
                 '}';

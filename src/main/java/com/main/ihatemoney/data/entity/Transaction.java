@@ -95,7 +95,7 @@ public class Transaction extends AbstractEntity{
         return "Transaction{" +
                 "date=" + date +
                 ", amount=" + amount +
-                ", description=" + description + '\'' +
+                ", description='" + description + '\'' +
                 ", category=" + category.getName() +
                 ", type=" + type +
                 ", userId=" + userId +

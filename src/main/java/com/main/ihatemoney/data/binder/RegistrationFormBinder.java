@@ -180,7 +180,7 @@ public class RegistrationFormBinder {
 
             } catch (ValidationException exception) {
                 System.out.println("Validation exception: " + exception.getMessage());
-                exception.getBeanValidationErrors().forEach(System.out::println);
+                exception.getValidationErrors().forEach(System.out::println);
             }
         });
     }

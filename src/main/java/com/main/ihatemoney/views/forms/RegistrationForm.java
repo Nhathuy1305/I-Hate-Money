@@ -34,7 +34,7 @@ public class RegistrationForm extends FormLayout implements RouterLayout {
     private Button submit;
 
     public RegistrationForm() {
-        logo = new Image("icons/icon.png", "Icon");
+        logo = new Image("icons/IHateMoney_logo.png", "Icon");
         logo.addClassName("logo-image-login");
         appName = new H1("Sign Up");
         appName.addClassName("app-name-reg");

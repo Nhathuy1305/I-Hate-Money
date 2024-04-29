@@ -10,13 +10,14 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 //@SpringBootApplication(scanBasePackages = "com.vaadin.flow.spring.security")
 @SpringBootApplication
-@Theme(value = "ihatemoney", variant = Lumo.LIGHT)
-//@Theme(value = "ihatemoney", variant = Lumo.DARK)
+@Theme(value = "ihatemoney", variant = Lumo.DARK)
+//@Theme(value = "ihatemoney", variant = Lumo.LIGHT)
 @PWA(
 		name = "IHateMoney",
 		shortName = "IHateMoney",
 		offlinePath = "offline.html",
-		offlineResources = {"images/offline.png"}
+		iconPath = "icons/IHateMoney_logo.png",
+		offlineResources = "icons/offline.png"
 )
 @NpmPackage(value = "line-awesome", version = "1.3.0")
 public class IHateMoneyApplication implements AppShellConfigurator {

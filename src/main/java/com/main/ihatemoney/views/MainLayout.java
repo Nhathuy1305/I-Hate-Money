@@ -43,7 +43,7 @@ public class MainLayout extends AppLayout {
 
     private void addHeader() {
         // header logo and app name
-        Image logo = new Image("icons/icon.png", "Icon");
+        Image logo = new Image("icons/IHateMoney_logo.png", "Icon");
         logo.addClassName("logo");
         H1 appname = new H1("IHateMoney");
         appname.addClassName("app-name");
@@ -97,7 +97,7 @@ public class MainLayout extends AppLayout {
 
     private void addDrawer(Tabs links) {
         // drawer logo
-        Image logo = new Image("icons/icon.png", "Icon");
+        Image logo = new Image("icons/IHateMoney_logo.png", "Icon");
         logo.addClassName("drawer-logo");
 
         // drawer app name

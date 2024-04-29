@@ -52,8 +52,8 @@ public class RegistrationFormBinder {
         }
 
         // Check complexity password (at least 1 uppercase letter, 1 lowercase letter, 1 digit)
-        if (!password.matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\\\d).+$")) {
-            return ValidationResult.error("Password should contain at least 1 uppercase letter, 1 lowercase letter, 1 digit");
+        if (!password.matches("^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[!@#$%^&+=]).+$")) {
+            return ValidationResult.error("Password should contain at least 1 uppercase letter, 1 lowercase letter, 1 digit, and 1 special character (!@#$%^&+=)");
         }
 
         if (!enablePasswordValidation) {

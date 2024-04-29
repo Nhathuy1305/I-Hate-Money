@@ -8,11 +8,12 @@ import com.vaadin.flow.theme.lumo.Lumo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication(scanBasePackages = "com.vaadin.flow.spring.security")
+//@SpringBootApplication(scanBasePackages = "com.vaadin.flow.spring.security")
+@SpringBootApplication
 @Theme(value = "ihatemoney", variant = Lumo.LIGHT)
 //@Theme(value = "ihatemoney", variant = Lumo.DARK)
 @PWA(
-		name = "I-Hate-Money",
+		name = "IHateMoney",
 		shortName = "IHateMoney",
 		offlinePath = "offline.html",
 		offlineResources = {"images/offline.png"}

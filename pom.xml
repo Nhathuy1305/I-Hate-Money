@@ -5,12 +5,12 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.2.3</version>
+		<version>3.0.6</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 
-	<groupId>com.main</groupId>
-	<artifactId>IHateMoney</artifactId>
+	<groupId>com.main.ihatemoney</groupId>
+	<artifactId>ihatemoney</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>IHateMoney</name>
 	<description>IHateMoney</description>
@@ -117,6 +117,12 @@
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
+			<version>2.15.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
 			<version>2.15.2</version>
 		</dependency>
 

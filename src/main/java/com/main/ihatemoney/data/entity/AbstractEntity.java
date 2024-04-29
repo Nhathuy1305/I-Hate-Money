@@ -2,7 +2,8 @@ package com.main.ihatemoney.data.entity;
 
 import jakarta.persistence.*;
 
-public class AbstractEntity {
+@MappedSuperclass
+public abstract class AbstractEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "idgenerator")

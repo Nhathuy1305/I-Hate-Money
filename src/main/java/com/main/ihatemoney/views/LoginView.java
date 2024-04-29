@@ -48,8 +48,8 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
         // Create layout for login form
         add (
                 logo,
-                new H1("IHateMoney"),
-                new H3("Your Path to IHateMoney"),
+                new H1("I Hate Money"),
+                new H3("Your Path to Love your Money"),
                 loginForm,
                 new RouterLink("Create an account", RegistrationView.class)
         );
@@ -59,7 +59,7 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
             ConfirmDialog confirmDialog = new ConfirmDialog();
             confirmDialog.setHeader("Forgot Password");
             confirmDialog.setText("If you are experiencing issues " +
-                    "logging into your account, please contact I.Hate.Money@gmail.com");
+                    "logging into your account, please contact dnhuy.ityu@gmail.com");
             confirmDialog.setConfirmText("OK");
             confirmDialog.open();
         });

@@ -41,7 +41,7 @@ public class ExportDataView extends VerticalLayout {
         info.setText("Click the button below to generate a CSV of all your transaction data");
 
         H5 contact = new H5();
-        contact.setText("If you are having issues downloading your data, please contact prospero.support@pm.me");
+        contact.setText("If you are having issues downloading your data, please contact dnhuy.ityu@gmail.com");
 
         downloadBtn.addThemeVariants(ButtonVariant.LUMO_PRIMARY);
         downloadBtn.getStyle().set("--lumo-primary-color", "green");

@@ -196,7 +196,7 @@ public class UserSettingsView extends Div {
 
     private Component createContactLayout() {
         return new VerticalLayout(new H4("For any questions, issues, or other inquiries, " +
-                "kindly direct your email to prospero.support@pm.me"));
+                "kindly direct your email to dnhuy.ityu@gmail.com"));
     }
 
     private Component createChangeAppThemeButton() {

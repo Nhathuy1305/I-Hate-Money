@@ -35,7 +35,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Route(value = "", layout = MainLayout.class)
-@PageTitle("Dashboard | Prospero")
+@PageTitle("Dashboard | IHateMoney")
 @PermitAll
 @CssImport(value = "./themes/ihatemoney/charts.css", themeFor = "vaadin-chart")
 @CssImport(value = "./themes/ihatemoney/views/dashboard-view.css")

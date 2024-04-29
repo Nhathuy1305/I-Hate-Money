@@ -8,7 +8,7 @@ import com.vaadin.flow.theme.lumo.Lumo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.vaadin.flow.spring.security")
 @Theme(value = "ihatemoney", variant = Lumo.LIGHT)
 //@Theme(value = "ihatemoney", variant = Lumo.DARK)
 @PWA(

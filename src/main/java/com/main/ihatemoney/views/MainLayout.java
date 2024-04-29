@@ -45,14 +45,14 @@ public class MainLayout extends AppLayout {
         // header logo and app name
         Image logo = new Image("icons/icon.png", "Icon");
         logo.addClassName("logo");
-        H1 appname = new H1("Prospero");
+        H1 appname = new H1("IHateMoney");
         appname.addClassName("app-name");
         HorizontalLayout logoAppname = new HorizontalLayout(logo, appname);
         logoAppname.addClassName("logo-app-name");
 
-        Anchor prosperoHomeLink = new Anchor("https://prospero-app.herokuapp.com/");
-        prosperoHomeLink.add(logoAppname);
-        prosperoHomeLink.setTarget("_blank"); // open in new window
+        Anchor ihatemoneyHomeLink = new Anchor("https://ihatemoney-app.herokuapp.com/");
+        ihatemoneyHomeLink.add(logoAppname);
+        ihatemoneyHomeLink.setTarget("_blank"); // open in new window
 
         // light/dark mode toggle button
         Button themeBtn = new Button(VaadinIcon.MOON.create());
@@ -72,11 +72,10 @@ public class MainLayout extends AppLayout {
         DrawerToggle menuButton = new DrawerToggle();
         menuButton.addClassName("drawer-toggle");
 
-        HorizontalLayout pageHeader = new HorizontalLayout(menuButton, prosperoHomeLink, themeBtn);
+        HorizontalLayout pageHeader = new HorizontalLayout(menuButton, ihatemoneyHomeLink, themeBtn);
 
         pageHeader.addClassNames("page-header");
         pageHeader.setDefaultVerticalComponentAlignment(FlexComponent.Alignment.CENTER);
-        // pageHeader.expand(prosperoHomeLink);
         pageHeader.setWidthFull();
         pageHeader.addClassName("px-m");
 
@@ -102,11 +101,11 @@ public class MainLayout extends AppLayout {
         logo.addClassName("drawer-logo");
 
         // drawer app name
-        H1 prospero = new H1("Prospero");
-        prospero.addClassNames("drawer-app-name");
+        H1 iHateMoney = new H1("IHateMoney");
+        iHateMoney.addClassNames("drawer-app-name");
 
         // drawer header
-        HorizontalLayout drawerHeader = new HorizontalLayout(logo, prospero);
+        HorizontalLayout drawerHeader = new HorizontalLayout(logo, iHateMoney);
         drawerHeader.addClassNames("drawer-header");
 
         // drawer log out

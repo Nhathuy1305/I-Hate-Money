@@ -420,7 +420,7 @@ public class TransactionView extends Div {
                 "<h5>There was an error creating the category you entered. Please ensure that the category you " +
                         "provided does not already exist. <br/><br/>" +
                         "If the problem persists, please contact: " +
-                        "<b><a href=\"mailto:prospero.support@pm.me\">prospero.support@pm.me</a></b></h5>"));
+                        "<b><a href=\"mailto:dnhuy.ityu@gmail.com\">dnhuy.ityu@gmail.com</a></b></h5>"));
 
         dialog.setConfirmText("OK");
         dialog.open();

@@ -71,6 +71,7 @@ const addLumoImportStyleTag = (lumoStyles, target) => {
     target.appendChild(styleTag);
   }
 };
+import stylesCss from 'themes/ihatemoney/styles.css?inline';
 import { typography } from '@vaadin/vaadin-lumo-styles/typography.js';
 import { color } from '@vaadin/vaadin-lumo-styles/color.js';
 import { spacing } from '@vaadin/vaadin-lumo-styles/spacing.js';
@@ -115,16 +116,17 @@ function getHash(input) {
 }
 export const applyTheme = (target) => {
   
-  
+  injectGlobalCss(stylesCss.toString(), target);
+    
   
   if (!document['_vaadintheme_ihatemoney_componentCss']) {
     
     document['_vaadintheme_ihatemoney_componentCss'] = true;
   }
-  addLumoImportStyleTag(typography.cssText, target);
-addLumoImportStyleTag(color.cssText, target);
-addLumoImportStyleTag(spacing.cssText, target);
-addLumoImportStyleTag(badge.cssText, target);
-addLumoImportStyleTag(utility.cssText, target);
+  injectGlobalCss(typography.cssText, target, true);
+injectGlobalCss(color.cssText, target, true);
+injectGlobalCss(spacing.cssText, target, true);
+injectGlobalCss(badge.cssText, target, true);
+injectGlobalCss(utility.cssText, target, true);
 
 }

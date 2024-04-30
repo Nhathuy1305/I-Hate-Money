@@ -19,7 +19,8 @@ jobs:
           java-version: '17'
 
       - name: Build with Maven
-        run: mvn clean install -Dvaadin.offlineKey=${{secrets.VAADIN_LICENSE_SERVER_TOKEN}}
+        run: mvn clean package -Pproduction
+      #        run: mvn clean install -Dvaadin.offlineKey=${{secrets.VAADIN_LICENSE_SERVER_TOKEN}}
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3

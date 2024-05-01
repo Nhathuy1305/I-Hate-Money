@@ -50,7 +50,7 @@ public class MainLayout extends AppLayout {
         HorizontalLayout logoAppname = new HorizontalLayout(logo, appname);
         logoAppname.addClassName("logo-app-name");
 
-        Anchor ihatemoneyHomeLink = new Anchor("https://ihatemoney-app.herokuapp.com/");
+        Anchor ihatemoneyHomeLink = new Anchor("https://i-hate-money.azurewebsites.net/", "IHateMoney");
         ihatemoneyHomeLink.add(logoAppname);
         ihatemoneyHomeLink.setTarget("_blank"); // open in new window
 

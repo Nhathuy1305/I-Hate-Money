@@ -27,7 +27,7 @@
 
 <!-- TABLE OF CONTENTS -->
 
-# Table of contents :round_pushpin:
+# Table of contents
 
 1. [Introduction](#Introduction)
 2. [Techniques](#Techniques)
@@ -36,7 +36,7 @@
 5. [Acknowledgments](#Acknowledgments)
 6. [Contact](#Contact)
 
-# Introduction <a name="Introduction"></a> :bricks:
+# Introduction <a name="Introduction"></a>
 
 <div style="text-align:justify">
 IHateMoney stands as an all-encompassing web-based solution crafted to empower individuals in the meticulous management
@@ -47,14 +47,14 @@ precise control over their financial landscape, thus enabling them to embark on 
 pertaining to their monetary affairs.
 </div>
 
-### Team Members :couplekiss_man_man:
+### Team Members
 
 | Order |     Name      |     ID      |         Email         |                     Github account                      |                            
 |:-----:|:-------------:|:-----------:|:---------------------:|:-------------------------------------------------------:|                          
 |   1   | Dang Nhat Huy | ITITIU20043 | dnhuy.ityu@gmail.com  |      [Nhathuy1305](https://github.com/Nhathuy1305)      |
 |   2   |  Ho Huu Hiep  | ITITIU20202 | hieptotheho@gmail.com |      [HieptotheHo](https://github.com/HieptotheHo)      |
 
-### Installation :dart:
+### Installation
 
 1. Open the terminal on your IDE
 2. Clone the repo
@@ -93,7 +93,7 @@ pertaining to their monetary affairs.
 8. Open the project in Intellij IDEA and run the `Application.java` file.
 9. Open your web browser and visit `http://localhost:8080` to access the app.
 
-### Motivation :mechanical_arm:
+### Motivation
 
 <div style="text-align:justify">
 Imagine a world where individuals feel empowered and in control of their financial destinies, where budgeting becomes a 
@@ -107,7 +107,7 @@ empowerment.
 </div>
 
 
-# Techniques <a name="Techniques"></a>:joystick:
+# Techniques <a name="Techniques"></a>
 
 - **Front-end**: HTML, CSS, JavaScript, Vaadin (TypeScript)
 - **Back-end**: Java, Spring Boot, Vaadin (Java)
@@ -117,7 +117,7 @@ empowerment.
 - **Deployment**: Microsoft Azure
 
 
-# Features <a name="Features"></a>:joystick:
+# Features <a name="Features"></a>
 - **User Registration and Authentication**: The app enables users to securely create an account and log in, granting 
 them access to their financial details.
 - **Dashboard**: Providing a comprehensive snapshot of the user's financial status, the dashboard showcases income, 
@@ -132,14 +132,14 @@ expense categories and monitor their progress.
 information, identifying spending trends.
 
 
-# Contributing<a name="Contributing">:bangbang:
+# Contributing<a name="Contributing">
 
 Contributions to IHateMoney are welcome! If you find any issues or have suggestions
 for improvements, please submit an issue or a pull request to
 the [GitHub repository](https://github.com/your-username/ihatemoney-fork).
 
 
-# Acknowledgments<a name="Acknowledgments">:brain:
+# Acknowledgments<a name="Acknowledgments">
 <div style="text-align:justify">
 We would want to express our gratitude to `Assoc. Prof. Nguyen Van Sinh` and `MSc. Tran Khai Minh` for providing us with the chance to participate in this
 project and apply what we learned in theory into practice. This project's learning curve was steep, but it was well
@@ -148,7 +148,7 @@ interacts with our project :heart:
 </div>
 
 
-# Contact<a name="Contact">:eye::tongue::eye:
+# Contact<a name="Contact">
 
 If you have any questions or need assistance, feel free to reach out to the
 project maintainer:

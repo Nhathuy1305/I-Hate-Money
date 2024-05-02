@@ -1,4 +1,4 @@
-<div align="center">
+<div style="text-align: center">
 
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
@@ -10,7 +10,7 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center"">
+<div style="text-align: center">
   <a href="https://i-hate-money.azurewebsites.net/">
     <img src="./images/IHateMoney_logo.png" alt="Logo" width="250">
 </a>
@@ -18,8 +18,8 @@
 <h3 align="center">WEB APPLICATION DEVELOPMENT</h3>
 <h4 align="center">Project Name: IHateMoney.net</h4>
 
-  <p align="center">
-    A comprehensive full-stack web application designed to empower users in effectively managing their finances and budget. The project serves for the Web Application Development course at International University - VNUHCM!
+  <p style="text-align: center">
+    A comprehensive full-stack web application designed to empower users in effectively managing their finances and budget. The project serves for the Web Application Development course in International University - VNUHCM!
   </p>
     <a href="https://i-hate-money.azurewebsites.net/">View Website</a>
 
@@ -38,13 +38,13 @@
 
 # Introduction <a name="Introduction"></a>
 
-<div align="justify">
+<div style="text-align:justify">
 IHateMoney stands as an all-encompassing web-based solution crafted to empower individuals in the meticulous management
-of their finances and the adept navigation of budgetary matters. Offering an intuitively designed interface 
+of their personal finances and the adept navigation of budgetary matters. Offering an intuitively designed interface 
 coupled with a robust toolkit, IHateMoney facilitates seamless tracking of income streams, expenditures, and savings 
 endeavors. By harnessing the capabilities of IHateMoney, users are bestowed with the invaluable ability to exercise 
 precise control over their financial landscape, thus enabling them to embark on a journey of informed decision-making 
-about their monetary affairs.
+pertaining to their monetary affairs.
 </div>
 
 ### Team Members
@@ -95,7 +95,7 @@ about their monetary affairs.
 
 ### Motivation
 
-<div align="justify">
+<div style="text-align:justify">
 Imagine a world where individuals feel empowered and in control of their financial destinies, where budgeting becomes a 
 seamless and intuitive part of daily life rather than a burdensome chore. This is the vision driving the creation of 
 IHateMoney. By crafting a comprehensive web application that not only simplifies financial management but also educates 
@@ -140,11 +140,11 @@ the [GitHub repository](https://github.com/your-username/ihatemoney-fork).
 
 
 # Acknowledgments<a name="Acknowledgments">
-<div align="justify">
+<div style="text-align:justify">
 We would want to express our gratitude to `Assoc. Prof. Nguyen Van Sinh` and `MSc. Tran Khai Minh` for providing us with the chance to participate in this
 project and apply what we learned in theory into practice. This project's learning curve was steep, but it was well
 worth it for all of us. We have learned more about interface technologies to construct a functioning application that
-interacts with our project :heart:.
+interacts with our project :heart:
 </div>
 
 
@@ -158,7 +158,7 @@ project maintainer:
 
 <br />
 
-<p align="right"><a href="#top">Back to top ↑</a></p>
+<p style="text-align: right"><a href="#top">Back to top ↑</a></p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->

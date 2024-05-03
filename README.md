@@ -10,18 +10,18 @@
 
 <!-- PROJECT LOGO -->
 <br />
-<div align="center"">
-  <a href="https://i-hate-money.azurewebsites.net/">
+<div align="center">
+  <a href="https://ihatemoney.live/">
     <img src="./images/IHateMoney_logo.png" alt="Logo" width="250">
 </a>
 
 <h3 align="center">WEB APPLICATION DEVELOPMENT</h3>
-<h4 align="center">Project Name: IHateMoney.net</h4>
+<h4 align="center">Project Name: ihatemoney.live</h4>
 
   <p align="center">
     A comprehensive full-stack web application designed to empower users in effectively managing their finances and budget. The project serves for the Web Application Development course at International University - VNUHCM!
   </p>
-    <a href="https://i-hate-money.azurewebsites.net/">View Website</a>
+    <a href="https://ihatemoney.live/">View Website</a>
 
 </div>
 
@@ -91,7 +91,7 @@ about their monetary affairs.
    ```
    based on your local database configuration (MySQL, PostgreSQL, etc).
 8. Open the project in Intellij IDEA and run the `Application.java` file.
-9. Open your web browser and visit `http://localhost:8080` to access the app.
+9. Open your web browser and visit `http://localhost:8081` to access the app.
 
 ### Motivation
 

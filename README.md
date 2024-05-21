@@ -181,4 +181,4 @@ project maintainer:
 
 [actions-shield]: https://img.shields.io/github/actions/workflow/status/Nhathuy1305/I-Hate-Money/main_i-hate-money.yml.svg?style=for-the-badge
 
-[actions-url]: https://github.com/Nhathuy1305/I-Hate-Money/actions/workflows/main_i-hate-money.yml
+[actions-url]: https://github.com/Nhathuy1305/I-Hate-Money/actions/workflows/main_ihatemoney.yml

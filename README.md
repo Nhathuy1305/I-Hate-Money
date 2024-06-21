@@ -126,10 +126,10 @@ empowerment.
   establishing budgets.
 - **Income Management**: Users can effortlessly add and manage their income sources within the app, facilitating a
   better grasp of their cash flow.
-- **Budgeting**: Prospero App presents budgeting features, empowering users to define personalized budgets for various
+- **Budgeting**: Presents budgeting features, empowering users to define personalized budgets for various
   expense categories and monitor their progress.
 - **Reports and Analytics**: Detailed reports and visually appealing analytics aid users in scrutinizing their financial
-  information, identifying spending trends.
+  information, and identifying spending trends.
 
 
 # Contributing<a name="Contributing">

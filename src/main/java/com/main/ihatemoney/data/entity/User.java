@@ -1,8 +1,6 @@
 package com.main.ihatemoney.data.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Enumerated;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -11,6 +9,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
+import java.sql.Timestamp;
 import java.util.Collection;
 import java.util.Collections;
 
@@ -38,6 +37,10 @@ public class User extends AbstractEntity implements UserDetails {
 
     @Size(min = 8, max = 128, message = "Password must be at least 8 characters, no more than 128 characters.")
     private String password;
+
+    private String resetToken;
+
+    private Timestamp tokenExpiration;
 
     public String getFirstName() {
         return firstName;
@@ -116,6 +119,22 @@ public class User extends AbstractEntity implements UserDetails {
 
     public void setRole(Role role) {
         this.role = role;
+    }
+
+    public String getResetToken() {
+        return resetToken;
+    }
+
+    public void setResetToken(String resetToken) {
+        this.resetToken = resetToken;
+    }
+
+    public Timestamp getTokenExpiration() {
+        return tokenExpiration;
+    }
+
+    public void setTokenExpiration(Timestamp tokenExpiration) {
+        this.tokenExpiration = tokenExpiration;
     }
 
     @Override

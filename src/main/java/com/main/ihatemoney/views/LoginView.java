@@ -1,13 +1,19 @@
 package com.main.ihatemoney.views;
 
+import com.main.ihatemoney.data.service.UserService;
+import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.confirmdialog.ConfirmDialog;
 import com.vaadin.flow.component.dependency.CssImport;
+import com.vaadin.flow.component.dialog.Dialog;
 import com.vaadin.flow.component.html.H1;
 import com.vaadin.flow.component.html.H3;
 import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.login.LoginForm;
 import com.vaadin.flow.component.login.LoginI18n;
+import com.vaadin.flow.component.notification.Notification;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
+import com.vaadin.flow.component.textfield.EmailField;
 import com.vaadin.flow.router.*;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 
@@ -19,8 +25,10 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
 
     LoginI18n i18n = LoginI18n.createDefault();
     LoginForm loginForm = new LoginForm();
+    private final UserService userService;
 
-    public LoginView() {
+    public LoginView(UserService userService) {
+        this.userService = userService;
         // Initialize setting for login form
         LoginI18n.Form i18nForm = i18n.getForm();
         i18n.setForm(i18nForm);
@@ -54,15 +62,8 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
                 new RouterLink("Create an account", RegistrationView.class)
         );
 
-        // Forgot Password
-        loginForm.addForgotPasswordListener(e -> {
-            ConfirmDialog confirmDialog = new ConfirmDialog();
-            confirmDialog.setHeader("Forgot Password");
-            confirmDialog.setText("If you are experiencing issues " +
-                    "logging into your account, please contact dnhuy.ityu@gmail.com");
-            confirmDialog.setConfirmText("OK");
-            confirmDialog.open();
-        });
+        //  Forgot Password
+        loginForm.addForgotPasswordListener(e -> openForgotPasswordDialog());
 
         // Convert the username text to lower case
         loginForm.addLoginListener(e -> {
@@ -83,6 +84,36 @@ public class LoginView extends VerticalLayout implements BeforeEnterObserver {
                 .containsKey("error")) {
             loginForm.setError(true);
         }
+    }
+
+    private void openForgotPasswordDialog() {
+        HorizontalLayout layout = new HorizontalLayout();
+        layout.setJustifyContentMode(JustifyContentMode.CENTER);
+        layout.setDefaultVerticalComponentAlignment(Alignment.CENTER);
+
+        Dialog resetDialog = new Dialog();
+        H3 title = new H3("Reset Your Password");
+        layout.add(title);
+
+        resetDialog.add(layout);
+
+        EmailField emailField = new EmailField("Enter your email:");
+        emailField.setRequired(true);
+        emailField.setClearButtonVisible(true);
+        emailField.setErrorMessage("Please enter a valid email address");
+
+        Button sendLinkButton = new Button("Send Reset Link", event -> {
+            if (!emailField.isEmpty() && emailField.getValue().contains("@")) {
+                userService.sendResetLink(emailField.getValue());
+                resetDialog.close();
+                Notification.show("If your email is registered, you will receive a reset link.");
+            } else {
+                emailField.setInvalid(true);
+            }
+        });
+
+        resetDialog.add(emailField, sendLinkButton);
+        resetDialog.open();
     }
 
     public LoginForm getLoginForm() {

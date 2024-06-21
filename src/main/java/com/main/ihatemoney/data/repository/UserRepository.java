@@ -6,6 +6,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
 
@@ -17,4 +19,10 @@ public interface UserRepository extends JpaRepository<User, Long> {
 
     @Query("select DISTINCT u from users u where u.id = :userId")
     User findUserById(Long userId);
+
+    @Query("select DISTINCT u from users u where u.email = :email")
+    User findByEmail(String email);
+
+    @Query("select DISTINCT u from users u where u.resetToken = :resetToken")
+    User findByResetToken(String resetToken);
 }

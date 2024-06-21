@@ -9,3 +9,11 @@
         height: 4rem;
     }
 }
+
+input[type="password"], button {
+    width: 100%;
+}
+
+.vaadin-form-layout {
+    margin: auto;
+}

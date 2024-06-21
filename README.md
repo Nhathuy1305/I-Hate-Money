@@ -179,6 +179,6 @@ project maintainer:
 
 [issues-url]: https://github.com/Nhathuy1305/I-Hate-Money/issues
 
-[actions-shield]: https://img.shields.io/github/actions/workflow/status/Nhathuy1305/I-Hate-Money/main_i-hate-money.yml.svg?style=for-the-badge
+[actions-shield]: https://img.shields.io/github/actions/workflow/status/Nhathuy1305/I-Hate-Money/main_ihatemoney.yml.svg?style=for-the-badge
 
 [actions-url]: https://github.com/Nhathuy1305/I-Hate-Money/actions/workflows/main_ihatemoney.yml
